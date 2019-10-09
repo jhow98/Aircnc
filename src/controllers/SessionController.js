@@ -7,10 +7,9 @@ module.exports = {
 
        let user = await User.findOne({email})
 
-       if(user){
-         return res.json({ "Error": "User alrealy exists" });
-         }
-         user = await User.create({ email });
+       if(!user){
+        user = await User.create({ email });
+      }
        return res.json(user);
     }
 }
