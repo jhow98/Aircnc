@@ -8,7 +8,7 @@ const routes = require('./routes');
 
 const app = express();
 
-mongoose.connect('mongodb//mongodb://127.0.0.1:27017/mongodb', {
+mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-atavq.mongodb.net/aircnc?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
