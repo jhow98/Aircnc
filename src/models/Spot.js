@@ -16,7 +16,7 @@ const SpotSchema = new mongoose.Schema({
 });
 
 SpotSchema.virtual('thumbnail_url').get(function(){
-    return `https://aircnc-rocketseat-backend.herokuapp.com/files/${this.thumbnail}`
+    return `${process.env.APP_URL}/files/${this.thumbnail}`
 })
 
 module.exports = mongoose.model('Spot', SpotSchema);
