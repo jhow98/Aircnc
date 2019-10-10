@@ -8,7 +8,7 @@ const routes = require('./routes');
 
 const app = express();
 
-mongoose.connect('mongodb//mongodb://127.0.0.1:27017/mongodb', {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
